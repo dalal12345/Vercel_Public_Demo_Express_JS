@@ -1,0 +1,36 @@
+{
+  "name": "deptwebsite",
+  "version": "4.0.0",
+  "description": "CSE Department website.....",
+  "main": "index.js",
+  "scripts": {
+    "test": "run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalal12345/cse14.git"
+  },
+  "author": "SUAhmed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dalal12345/cse14/issues"
+  },
+  "homepage": "https://github.com/dalal12345/cse14#readme",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "bcrypt": "^5.1.1",
+    "connect-mongodb-session": "^5.0.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "express-flash-message": "^3.0.2",
+    "express-session": "^1.18.0",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.3",
+    "multer": "^1.4.5-lts.1",
+    "object-hash": "^3.0.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

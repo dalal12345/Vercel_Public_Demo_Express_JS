@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    /*background-color: red;*/
+}
+
+.navbar{
+    display: grid;
+    background: #C33764;
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);
+    background: linear-gradient(to right, #1D2671, #C33764);
+    border-bottom: 1px solid black;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    align-content: center;
+    width: 100vw;
+    height: 200px;
+
+}
+.navbar:hover {
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-bottom:0px;
+
+}
+
+.navbarItems {
+    display: grid;
+    justify-items: center;
+    padding: 5px;
+
+
+}
+.navbar a {
+    display: block;
+    list-style-type: none;
+    /*font-size: 1.1rem;*/
+    color: #ffffff;
+    width: 100%;
+    padding: 5px;
+    text-decoration: none;
+
+}
+
+.navbar li {
+    font-style: italic;
+    font-size: 20px;
+}
+
+.navbar li:hover {
+    color: black;
+
+
+}
+
+/*900px rules......*/
+@media only screen and (min-width: 900px) {
+    .navbarItems{
+        grid-template-columns: repeat(6,auto);
+
+    }
+
+    .navbar{
+        height: 10vh;
+        width: fit-content;
+        justify-self: center;
+        border-radius:10px 10px 10px 10px;
+        margin-top: 85vh;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+
+

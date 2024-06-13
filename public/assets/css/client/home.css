@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&amp;display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto Condensed", sans-serif;
+    /*font-optical-sizing: auto;*/
+    font-weight: normal ;
+    font-style: normal;
+
+}
+
+body{
+    display: grid;
+    /*width: 100vw;*/
+}
+
+
+
+
+.container {
+    display: grid;
+    /*width: 100vw;*/
+    /*padding-top: 60px;*/
+}
+
+/*container background*/
+.container {
+    background: #C33764;
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);
+    background: linear-gradient(to right, #1D2671, #C33764);
+
+}
+
+.progressLoading{
+    width: 200px;
+    height: 200px;
+}
+
+.container_no_data{
+    display: grid;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.allStudentsSection {
+    display:grid;
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    margin-top: 50px;
+}
+
+.studentBox {
+    width: 250px;
+    /*height:500px;*/
+    /*margin-top: 20px;*/
+    padding: 10px;
+    padding-bottom: 20px;
+    display:grid;
+    box-shadow: 5px 2px 20px 1px black;
+    background: #C33764;
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);
+    background: linear-gradient(to right, #1D2671, #C33764);
+    border-radius: 10px;
+    color: aliceblue;
+    border:0px solid black;
+    justify-content: center;
+
+
+}
+.studentBox:hover {
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+
+
+.profilePhoto {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin-top: 20px;
+    justify-self: center;
+
+}
+
+
+
+.no_user{
+    justify-self: center;
+    align-self: center;
+    background-color: black;
+    width:100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    color: white;
+}
+
+.label {
+    float: left;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+h2 {
+    font-size: 20px;
+    font-style: italic;
+}
+
+
+.home_town_label {
+    color: white;
+    text-shadow: 1px 1px black;
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.itemInfo {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    font-style: italic;
+}
+.itemLabelInfo{
+    box-shadow: 1px 2px 5px 1px black;
+    display:flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 2px;
+    margin-top: 10px;
+    height: 30px;
+    align-self: start;
+}
+
+.itemLabelInfo:hover {
+    background: #C33764;
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);
+    background: linear-gradient(to right, #1D2671, #C33764);
+
+}
+
+.fbId{
+    width: 30px;
+    box-shadow: 2px 2px 2px 2px black;
+    justify-self: center;
+    height: 30px;
+    /*margin-top: 10px;*/
+    /*padding: 5px;*/
+    border-radius: 10px;
+
+}
+.fbId:hover{
+    background: #C33764;
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);
+    background: linear-gradient(to right, #1D2671, #C33764);
+}
+
+.fbIdContainer{
+    width: 30px;
+    justify-self: center;
+}
+
+
+/*900px rule*/
+@media only screen and (min-width: 900px) {
+    .allStudentsSection{
+        grid-template-columns: repeat(max(2),auto);
+    }
+}
+
+/*900px rules......*/
+@media only screen and (min-width: 1200px) {
+    .allStudentsSection{
+        grid-template-columns: repeat(max(3),auto);
+    }
+}

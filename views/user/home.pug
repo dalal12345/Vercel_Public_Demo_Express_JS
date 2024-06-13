@@ -1,0 +1,73 @@
+doctype html
+html
+    head(lang="en")
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='description', content='Some description')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title All students
+        link(rel='stylesheet', href='/assets/css/client/home.css')
+        link(rel='stylesheet', href='/assets/css/client/navbar.css')
+        link(rel='stylesheet', href='/assets/css/client/footer.css')
+
+
+    body
+
+         include navbar
+         if allStudentsInfo.length
+                 div(class="container")
+                      div(class="allStudentsSection")
+                           each val in allStudentsInfo
+                                div(class="studentBox")
+                                          if val.studentPhoto
+                                               img(src=`${val.studentPhoto} || ` alt="image not found" class="profilePhoto")
+                                          else
+                                               img(src=`/users/default.png` alt="image not found" class="profilePhoto")
+                                          br
+                                          if val.studentName
+                                                   label
+                                                          img(src='/assets/images/student.png' class="label")
+                                                          h2=val.studentName.toUpperCase()
+                                          if val.studentSchoolName
+                                                  label(class="itemLabelInfo")
+
+                                                         img(src='/assets/images/education.png' class="label")
+
+                                                         p(class="itemInfo")= val.studentSchoolName.toUpperCase()
+                                          if val.studentCollegeName
+                                                  label(class="itemLabelInfo")
+
+                                                      img(src='/assets/images/education.png' class="label")
+
+                                                      p(class="itemInfo")=val.studentCollegeName.toUpperCase()
+                                          if val.studentHomeTown
+                                                  label(
+                                                      class="itemLabelInfo home_town_label"
+
+                                                      )
+
+                                                           img(src='/assets/images/home.png' class="label")
+
+                                                           p(class="itemInfo")=val.studentHomeTown.toUpperCase()
+                                          if val.favouriteQuote
+                                              label(class="itemLabelInfo")
+                                                  img(src='/assets/images/quote.png' class="label")
+
+                                                  p(class="itemInfo" alt="image not found")=val.favouriteQuote.toUpperCase()
+                                          if val.fbId
+                                              a(href=`${val.fbId}`, class="fbIdContainer", target="_blank")
+                                                  img(src='/assets/images/facebook.png' class="fbId")
+                      div(class="footer")
+                               h1
+
+                 script(src="/assets/js/user/home.js")
+
+
+
+
+
+
+
+         else
+                div(class="container_no_data")
+                      img(src="/assets/images/progress.gif" class="progressLoading")
